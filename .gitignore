@@ -1,6 +1,8 @@
 #intelliJ Files
 *.idea
 
+target/
+
 # Compiled class file
 *.class
 

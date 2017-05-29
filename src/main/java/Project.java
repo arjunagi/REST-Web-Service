@@ -1,5 +1,6 @@
 import lombok.Data;
 import java.util.ArrayList;
+import com.google.gson.*;
 
 /**
  * Created by Karthik on 5/27/17.
@@ -18,7 +19,7 @@ public class Project {
     private ArrayList<TargetKeys> targetKeys = new ArrayList<>();
 
     public boolean isValid() {
-        return id>=0 && creationDate!=null && expiryDate!=null && !targetCountries.isEmpty() && projectCost>=0;
+        return id>=0 && !creationDate.isEmpty() && !expiryDate.isEmpty() && !targetCountries.isEmpty() && projectCost>=0 && !projectUrl.isEmpty();
     }
 }
 
