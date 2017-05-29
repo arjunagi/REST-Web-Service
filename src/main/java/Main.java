@@ -57,8 +57,13 @@ public class Main {
         });
 
         get("/requestproject", "application/json", (request, response) -> {
+            Object responseMessage = null;
             response.type("application/json");
-            return gson.toJson(requestProjectService.requestProject(request));
+            responseMessage = requestProjectService.requestProject(request);
+            if(responseMessage instanceof ResponseMessageWithStatusCode) {
+                response.status(((ResponseMessageWithStatusCode) responseMessage).getStatusCode());
+            }
+            return gson.toJson(responseMessage);
         });
     }
 }

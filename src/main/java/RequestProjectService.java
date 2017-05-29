@@ -45,9 +45,8 @@ public class RequestProjectService {
                     return  new ResponseMessage("no project found");
                 }
             }
-            // line is not visible here.
         } catch (Exception e) {
-            return new ResponseMessageWithStatusCode("Error during file read", 500);
+            return new ResponseMessageWithStatusCode(e + "Error during file read", 500);
         }
         return null;
     }
