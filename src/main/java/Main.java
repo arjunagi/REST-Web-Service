@@ -8,6 +8,8 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import spark.*;
+
 import java.io.StringReader;
 import java.util.Map;
 import static spark.Spark.*;
@@ -23,7 +25,11 @@ public class Main {
         port(5000);
 
         before((request, response) -> {
-            logger.info(request.requestMethod() + request.body());
+            logger.info(request.requestMethod() + "\n" +request.body());
+        });
+
+        after((request, response) -> {
+            logger.info(response.raw().toString() + response.body()+ "\n");
         });
 
         post("/createproject", "application/json", (request, response) -> {
@@ -51,11 +57,8 @@ public class Main {
         });
 
         get("/requestproject", "application/json", (request, response) -> {
-            response.status(200);
             response.type("application/json");
-            Map<String, String[]> temp = request.queryMap().toMap();
-            String id = request.queryParams("projectid");
-            return gson.toJson(requestProjectService.requestProject(id));
+            return gson.toJson(requestProjectService.requestProject(request));
         });
     }
 }
