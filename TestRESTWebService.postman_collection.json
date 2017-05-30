@@ -1,0 +1,1285 @@
+{
+	"variables": [],
+	"info": {
+		"name": "TestRESTWebService",
+		"_postman_id": "5dfa2471-ea6c-64f2-fad9-a6646f43c894",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET - Invalid Requests",
+			"description": "",
+			"item": [
+				{
+					"name": "Get invalid parameter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"message\"] = jsonData.message === \"Invalid parameter in the request\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?projectid=1&invalidParam=1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with non existing projectid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"message\"] = jsonData.message === \"no project found\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?projectid=11",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with correct country and wrong number",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"message\"] = jsonData.message === \"no project found\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?country=india&number=1000",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with non existing country",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"message\"] = jsonData.message === \"no project found\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?country=argentina",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with wrong path",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 404\"] = responseCode.code === 404;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with negative project id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"message\"] = jsonData.message === \"no project found\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?projectid=-1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with no value for parameter projectid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"message\"] = jsonData.message === \"Invalid parameter in the request\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?projectid",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with wrong keyword and number",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"message\"] = jsonData.message === \"no project found\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?keyword=india&number=1000",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET - Valid Requests",
+			"description": "",
+			"item": [
+				{
+					"name": "Get with projectid, country, keyword and number",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"projectName\"] = jsonData.projectName === \"test project number 5\";",
+									"tests[\"projectCost\"] = jsonData.projectCost === 10;",
+									"tests[\"projectUrl\"] = jsonData.projectUrl === \"http://www.unity3d.com\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?projectid=5&country=usa&number=29&keyword=sports",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with no parameters",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"projectName\"] = jsonData.projectName === \"test project number 8\";",
+									"tests[\"projectCost\"] = jsonData.projectCost === 10;",
+									"tests[\"projectUrl\"] = jsonData.projectUrl === \"http://www.unity3d.com\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with projectId and country",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"projectName\"] = jsonData.projectName === \"test project number 6\";",
+									"tests[\"projectCost\"] = jsonData.projectCost === 1;",
+									"tests[\"projectUrl\"] = jsonData.projectUrl === \"http://www.unity3d.com\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?projectid=6&country=usa",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with correct country",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"projectName\"] = jsonData.projectName === \"test project number 8\";",
+									"tests[\"projectCost\"] = jsonData.projectCost === 10;",
+									"tests[\"projectUrl\"] = jsonData.projectUrl === \"http://www.unity3d.com\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?country=usa",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with correct country and number",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"projectName\"] = jsonData.projectName === \"test project number 10\";",
+									"tests[\"projectCost\"] = jsonData.projectCost === 10;",
+									"tests[\"projectUrl\"] = jsonData.projectUrl === \"http://www.unity3d.com\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?country=india&number=20",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with correct keyword",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"projectName\"] = jsonData.projectName === \"test project number 10\";",
+									"tests[\"projectCost\"] = jsonData.projectCost === 10;",
+									"tests[\"projectUrl\"] = jsonData.projectUrl === \"http://www.unity3d.com\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?keyword=xyz",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with only project id 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"message\"] = jsonData.message === \"no project found\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?projectid=1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with correct number",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"projectName\"] = jsonData.projectName === \"test project number 8\";",
+									"tests[\"projectCost\"] = jsonData.projectCost === 10;",
+									"tests[\"projectUrl\"] = jsonData.projectUrl === \"http://www.unity3d.com\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?number=10",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with correct keyword and number",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"projectName\"] = jsonData.projectName === \"test project number 10\";",
+									"tests[\"projectCost\"] = jsonData.projectCost === 10;",
+									"tests[\"projectUrl\"] = jsonData.projectUrl === \"http://www.unity3d.com\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?keyword=sports&number=20",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get with correct country, keyword and number",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"projectName\"] = jsonData.projectName === \"test project number 10\";",
+									"tests[\"projectCost\"] = jsonData.projectCost === 10;",
+									"tests[\"projectUrl\"] = jsonData.projectUrl === \"http://www.unity3d.com\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject?country=india&keyword=sports&number=20",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST - Invalid Requests",
+			"description": "",
+			"item": [
+				{
+					"name": "POST with wrong path",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 404\"] = responseCode.code === 404;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/requestproject",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post Single project with empty projectName",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"message\"] = jsonData.message === \"Data is invalid\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n   \"id\":1,\n   \"projectName\":\"\",\n   \"creationDate\":\"05112017 00:00:00\",\n   \"expiryDate\":\"05202017 00:00:00\",\n   \"enabled\":true,\n   \"targetCountries\":[  \n      \"USA\",\n      \"CANADA\",\n      \"MEXICO\",\n      \"BRAZIL\"\n   ],\n   \"projectCost\":5.5,\n   \"projectUrl\":\"http://www.unity3d.com\",\n   \"targetKeys\":[  \n      {  \n         \"number\":25,\n         \"keyword\":\"movie\"\n      },\n      {  \n         \"number\":30,\n         \"keyword\":\"sports\"\n      }\n   ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post Single project with null projectName",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"message\"] = jsonData.message === \"Data is invalid\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n   \"id\":1,\n   \"projectName\": null,\n   \"creationDate\":\"05112017 00:00:00\",\n   \"expiryDate\":\"05202017 00:00:00\",\n   \"enabled\":true,\n   \"targetCountries\":[  \n      \"USA\",\n      \"CANADA\",\n      \"MEXICO\",\n      \"BRAZIL\"\n   ],\n   \"projectCost\":5.5,\n   \"projectUrl\":\"http://www.unity3d.com\",\n   \"targetKeys\":[  \n      {  \n         \"number\":25,\n         \"keyword\":\"movie\"\n      },\n      {  \n         \"number\":30,\n         \"keyword\":\"sports\"\n      }\n   ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post Single project with id as IDENTITY",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"message\"] = jsonData.message === \"Invalid key in data\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n   \"IDENTITY\":1,\n   \"projectName\":\"test project number 1\",\n   \"EXTRA\": \"extra\",\n   \"creationDate\":\"05112017 00:00:00\",\n   \"expiryDate\":\"05202017 00:00:00\",\n   \"enabled\":true,\n   \"targetCountries\":[  \n      \"USA\",\n      \"CANADA\",\n      \"MEXICO\",\n      \"BRAZIL\"\n   ],\n   \"projectCost\":5.5,\n   \"projectUrl\":\"http://www.unity3d.com\",\n   \"targetKeys\":[  \n      {  \n         \"number\":25,\n         \"keyword\":\"movie\"\n      },\n      {  \n         \"number\":30,\n         \"keyword\":\"sports\"\n      }\n   ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post Single project with additional key EXTRA",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"message\"] = jsonData.message === \"Invalid key in data\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n   \"id\":1,\n   \"projectName\":\"test project number 1\",\n   \"EXTRA\": \"extra\",\n   \"creationDate\":\"05112017 00:00:00\",\n   \"expiryDate\":\"05202017 00:00:00\",\n   \"enabled\":true,\n   \"targetCountries\":[  \n      \"USA\",\n      \"CANADA\",\n      \"MEXICO\",\n      \"BRAZIL\"\n   ],\n   \"projectCost\":5.5,\n   \"projectUrl\":\"http://www.unity3d.com\",\n   \"targetKeys\":[  \n      {  \n         \"number\":25,\n         \"keyword\":\"movie\"\n      },\n      {  \n         \"number\":30,\n         \"keyword\":\"sports\"\n      }\n   ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post with empty Json",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"message\"] = jsonData.message === \"Data is invalid\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n  \n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post with incorrect Json format",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 400;",
+									"tests[\"message\"] = jsonData.message === \"com.google.gson.stream.MalformedJsonException: Unterminated object at line 3 column 5 path $.id\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n   \"id\":1\n   \"projectName\":\"test project number 1\",\n   \"EXTRA\": \"extra\",\n   \"creationDate\":\"05112017 00:00:00\",\n   \"expiryDate\":\"05202017 00:00:00\",\n   \"enabled\":true,\n   \"targetCountries\":[  \n      \"USA\",\n      \"CANADA\",\n      \"MEXICO\",\n      \"BRAZIL\"\n   ],\n   \"projectCost\":5.5,\n   \"projectUrl\":\"http://www.unity3d.com\",\n   \"targetKeys\":[  \n      {  \n         \"number\":25,\n         \"keyword\":\"movie\"\n      },\n      {  \n         \"number\":30,\n         \"keyword\":\"sports\"\n      }\n   ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post with string as body",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"message\"] = jsonData.message === \"Data is invalid\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"test\""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST - Many successful request",
+			"description": "",
+			"item": [
+				{
+					"name": "Post project 1 returns 200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 200;",
+									"tests[\"message\"] = jsonData.message === \"campaign is successfully created\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n   \"id\":1,\n   \"projectName\":\"test project number 1\",\n   \"creationDate\":\"05112017 00:00:00\",\n   \"expiryDate\":\"05202017 00:00:00\",\n   \"enabled\":true,\n   \"targetCountries\":[  \n      \"USA\",\n      \"CANADA\",\n      \"MEXICO\",\n      \"BRAZIL\"\n   ],\n   \"projectCost\":5.5,\n   \"projectUrl\":\"http://www.unity3d.com\",\n   \"targetKeys\":[  \n      {  \n         \"number\":25,\n         \"keyword\":\"movie\"\n      },\n      {  \n         \"number\":30,\n         \"keyword\":\"sports\"\n      }\n   ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post project 2 returns 200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 200;",
+									"tests[\"message\"] = jsonData.message === \"campaign is successfully created\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n   \"id\":2,\n   \"projectName\":\"test project number 2\",\n   \"creationDate\":\"05112017 00:00:00\",\n   \"expiryDate\":\"05202017 00:00:00\",\n   \"targetCountries\":[  \n      \"USA\",\n      \"CANADA\"\n   ],\n   \"projectCost\":2.5,\n   \"projectUrl\":\"http://www.google.com\",\n   \"targetKeys\":[  \n      {  \n         \"number\":25,\n         \"keyword\":\"movie\"\n      },\n      {  \n         \"number\":30,\n         \"keyword\":\"sports\"\n      }\n   ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post project 3 returns 200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 200;",
+									"tests[\"message\"] = jsonData.message === \"campaign is successfully created\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n   \"id\":3,\n   \"projectName\":\"test project number 3\",\n   \"creationDate\":\"03132017 00:00:00\",\n   \"expiryDate\":\"02202019 00:00:00\",\n   \"targetCountries\":[  \n      \"CANADA\",\n      \"ENGLAND\",\n      \"INDIA\"\n   ],\n   \"projectCost\":0.5,\n   \"projectUrl\":\"http://www.unity3d.com\",\n   \"targetKeys\":[  \n      {  \n         \"number\":20,\n         \"keyword\":\"cars\"\n      }\n   ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post project 4 returns 200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 200;",
+									"tests[\"message\"] = jsonData.message === \"campaign is successfully created\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n   \"id\":4,\n   \"projectName\":\"game project 4\",\n   \"creationDate\":\"01292017 00:00:00\",\n   \"expiryDate\":\"09222017 00:00:00\",\n   \"targetCountries\":[  \n      \"IRELAND\",\n      \"FINLAND\"\n   ],\n   \"projectCost\":15.5,\n   \"projectUrl\":\"http://www.unity3d.com\",\n   \"targetKeys\":[  \n      {  \n         \"number\":11,\n         \"keyword\":\"games\"\n      },\n      {  \n         \"number\":10,\n         \"keyword\":\"mobile\"\n      }\n   ]\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post project 5 returns 200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 200;",
+									"tests[\"message\"] = jsonData.message === \"campaign is successfully created\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n   \"id\":5,\n   \"projectName\":\"test project number 5\",\n   \"creationDate\":\"05112017 00:00:00\",\n   \"expiryDate\":\"05202018 00:00:00\",\n   \"enabled\":true,\n   \"targetCountries\":[  \n      \"USA\",\n      \"CANADA\",\n      \"INDIA\",\n      \"BRAZIL\"\n   ],\n   \"projectCost\":10,\n   \"projectUrl\":\"http://www.unity3d.com\",\n   \"targetKeys\":[  \n      {  \n         \"number\":25,\n         \"keyword\":\"movie\"\n      },\n      {  \n         \"number\":30,\n         \"keyword\":\"sports\"\n      }\n   ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post project 6 returns 200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 200;",
+									"tests[\"message\"] = jsonData.message === \"campaign is successfully created\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n   \"id\":6,\n   \"projectName\":\"test project number 6\",\n   \"creationDate\":\"05112017 00:00:00\",\n   \"expiryDate\":\"05202020 00:00:00\",\n   \"enabled\":true,\n   \"targetCountries\":[  \n      \"USA\",\n      \"CANADA\",\n      \"BRAZIL\"\n   ],\n   \"projectCost\":1.0,\n   \"projectUrl\":\"http://www.unity3d.com\",\n   \"targetKeys\":[  \n      {  \n         \"number\":30,\n         \"keyword\":\"sports\"\n      }\n   ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post project 7 returns 200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 200;",
+									"tests[\"message\"] = jsonData.message === \"campaign is successfully created\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n   \"id\":7,\n   \"projectName\":\"game project number 7\",\n   \"creationDate\":\"05112017 00:00:00\",\n   \"expiryDate\":\"05202017 00:00:00\",\n   \"enabled\":true,\n   \"targetCountries\":[  \n      \"USA\",\n      \"CANADA\",\n      \"INDIA\",\n      \"BRAZIL\"\n   ],\n   \"projectCost\":2.5,\n   \"projectUrl\":\"http://www.unity3d.com\",\n   \"targetKeys\":[  \n      {  \n         \"number\":25,\n         \"keyword\":\"movie\"\n      },\n      {  \n         \"number\":30,\n         \"keyword\":\"sports\"\n      }\n   ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post project 8 returns 200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 200;",
+									"tests[\"message\"] = jsonData.message === \"campaign is successfully created\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n   \"id\":8,\n   \"projectName\":\"test project number 8\",\n   \"creationDate\":\"05112017 00:00:00\",\n   \"expiryDate\":\"06202018 00:00:00\",\n   \"enabled\":true,\n   \"targetCountries\":[  \n      \"USA\"\n   ],\n   \"projectCost\":10,\n   \"projectUrl\":\"http://www.unity3d.com\",\n   \"targetKeys\":[  \n      {  \n         \"number\":100,\n         \"keyword\":\"movie\"\n      },\n      {  \n         \"number\":3,\n         \"keyword\":\"sports\"\n      }\n   ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post project 9 returns 200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 200;",
+									"tests[\"message\"] = jsonData.message === \"campaign is successfully created\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n   \"id\":9,\n   \"projectName\":\"test project number 9\",\n   \"creationDate\":\"05112017 00:00:00\",\n   \"expiryDate\":\"05202018 00:00:00\",\n   \"enabled\":false,\n   \"targetCountries\":[  \n      \"USA\",\n      \"GERMANY\"\n   ],\n   \"projectCost\":3.0,\n   \"projectUrl\":\"http://www.unity3d.com\",\n   \"targetKeys\":[  \n      {  \n         \"number\":25,\n         \"keyword\":\"movie\"\n      },\n      {  \n         \"number\":30,\n         \"keyword\":\"xyz\"\n      }\n   ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post project 10 returns 200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 200;",
+									"tests[\"message\"] = jsonData.message === \"campaign is successfully created\";",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n   \"id\":10,\n   \"projectName\":\"test project number 10\",\n   \"creationDate\":\"05112017 00:00:00\",\n   \"expiryDate\":\"05202018 00:00:00\",\n   \"enabled\":true,\n   \"targetCountries\":[  \n      \"USA\",\n      \"CANADA\",\n      \"INDIA\",\n      \"BRAZIL\"\n   ],\n   \"projectCost\":10,\n   \"projectUrl\":\"http://www.unity3d.com\",\n   \"targetKeys\":[  \n      {  \n         \"number\":25,\n         \"keyword\":\"xyz\"\n      },\n      {  \n         \"number\":30,\n         \"keyword\":\"sports\"\n      }\n   ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post - Json Array",
+			"description": "",
+			"item": [
+				{
+					"name": "Post 2 Projects in the json array",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 200;",
+									"tests[\"message\"] = jsonData.message === \"campaign is successfully created\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n   {\n      \"id\":1,\n      \"projectName\":\"test project number 1\",\n      \"creationDate\":\"05112017 00:00:00\",\n      \"expiryDate\":\"05202017 00:00:00\",\n      \"enabled\":true,\n      \"targetCountries\":[\n         \"USA\",\n         \"CANADA\",\n         \"MEXICO\",\n         \"BRAZIL\"\n      ],\n      \"projectCost\":5.5,\n      \"projectUrl\":\"http://www.unity3d.com\",\n      \"targetKeys\":[\n         {\n            \"number\":25,\n            \"keyword\":\"movie\"\n         },\n         {\n            \"number\":30,\n            \"keyword\":\"sports\"\n         }\n      ]\n   },\n   {\n      \"id\":2,\n      \"projectName\":\"test project number 2\",\n      \"creationDate\":\"05112017 00:00:00\",\n      \"expiryDate\":\"05202017 00:00:00\",\n      \"enabled\":true,\n      \"targetCountries\":[\n         \"USA\",\n         \"CANADA\",\n         \"MEXICO\",\n         \"BRAZIL\"\n      ],\n      \"projectCost\":6.0,\n      \"projectUrl\":\"http://www.unity3d.com\",\n      \"targetKeys\":[\n         {\n            \"number\":25,\n            \"keyword\":\"movie\"\n         },\n         {\n            \"number\":30,\n            \"keyword\":\"sports\"\n         }\n      ]\n   }\n]"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post Single project as Json array",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 200;",
+									"tests[\"message\"] = jsonData.message === \"campaign is successfully created\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n{\n\"id\": 1,\n\n\"projectName\": \"test project number 1\",\n\n\"creationDate\": \"05112017 00:00:00\",\n\n\"expiryDate\" : \"05202017 00:00:00\",\n\n\"enabled\": true,\n\n\"targetCountries\": [\"USA\", \"CANADA\", \"MEXICO\", \"BRAZIL\"],\n\n\"projectCost\": 5.5,\n\n\"projectUrl\": \"http://www.unity3d.com\",\n\n\"targetKeys\": [{\n\n\"number\": 25,\n\n\"keyword\": \"movie\"\n\n},\n\n{\n\n\"number\": 30,\n\n\"keyword\":\"sports\"\n\n}]\n\n}\n]"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post 2 Projects with extra param",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"message\"] = jsonData.message === \"Invalid key in data\";"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:5000/createproject",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n   {\n      \"id\":1,\n      \"EXTRA\": \"extra\",\n      \"projectName\":\"test project number 1\",\n      \"creationDate\":\"05112017 00:00:00\",\n      \"expiryDate\":\"05202017 00:00:00\",\n      \"enabled\":true,\n      \"targetCountries\":[\n         \"USA\",\n         \"CANADA\",\n         \"MEXICO\",\n         \"BRAZIL\"\n      ],\n      \"projectCost\":5.5,\n      \"projectUrl\":\"http://www.unity3d.com\",\n      \"targetKeys\":[\n         {\n            \"number\":25,\n            \"keyword\":\"movie\"\n         },\n         {\n            \"number\":30,\n            \"keyword\":\"sports\"\n         }\n      ]\n   },\n   {\n      \"id\":2,\n      \"projectName\":\"test project number 1\",\n      \"creationDate\":\"05112017 00:00:00\",\n      \"expiryDate\":\"05202017 00:00:00\",\n      \"enabled\":true,\n      \"targetCountries\":[\n         \"USA\",\n         \"CANADA\",\n         \"MEXICO\",\n         \"BRAZIL\"\n      ],\n      \"projectCost\":5.5,\n      \"projectUrl\":\"http://www.unity3d.com\",\n      \"targetKeys\":[\n         {\n            \"number\":25,\n            \"keyword\":\"movie\"\n         },\n         {\n            \"number\":30,\n            \"keyword\":\"sports\"\n         }\n      ]\n   }\n]"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT Single Json object copy",
+			"request": {
+				"url": "http://localhost:5000/createproject",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n\"id\": 1,\n\n\"projectName\": \"test project number 1\",\n\n\"creationDate\": \"05112017 00:00:00\",\n\n\"expiryDate\" : \"05202017 00:00:00\",\n\n\"enabled\": true,\n\n\"targetCountries\": [\"USA\", \"CANADA\", \"MEXICO\", \"BRAZIL\"],\n\n\"projectCost\": 5.5,\n\n\"projectUrl\": \"http://www.unity3d.com\",\n\n\"targetKeys\": [{\n\n\"number\": 25,\n\n\"keyword\": \"movie\"\n\n},\n\n{\n\n\"number\": 30,\n\n\"keyword\":\"sports\"\n\n}]\n\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
