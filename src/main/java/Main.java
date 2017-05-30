@@ -27,8 +27,9 @@ public class Main {
          */
         before((request, response) -> {
             if(!request.requestMethod().equals("POST") && ! request.requestMethod().equals("GET")) {
-                response.status(400);
-                response.body(gson.toJson(new ResponseMessageWithStatusCode("Invalid request method", 400)));
+                response.status(405);
+                response.header("Allow", "GET, POST");
+                response.body(gson.toJson(new ResponseMessageWithStatusCode("Invalid request method", response.status())));
             }
             String params = "";
             if(request.queryMap().hasKeys()) {
@@ -66,8 +67,8 @@ public class Main {
                     response.status(responseMessageWithStatusCode.getStatusCode());
                 }
                 else {
-                    response.status(400);
-                    responseMessageWithStatusCode = new ResponseMessageWithStatusCode("Data is invalid", 400);
+                    response.status(403);
+                    responseMessageWithStatusCode = new ResponseMessageWithStatusCode("Data is invalid", response.status());
                 }
                 return gson.toJson(responseMessageWithStatusCode);
             } catch (JsonParseException e) {

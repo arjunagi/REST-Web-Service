@@ -11,15 +11,16 @@ public class Project {
     private String projectName;
     private String creationDate;
     private String expiryDate;
-    private Boolean enabled;
+    private boolean enabled;
     private ArrayList<String> targetCountries = new ArrayList<>();
     private double projectCost;
     private String projectUrl;
     private ArrayList<TargetKeys> targetKeys = new ArrayList<>();
 
     public boolean isValid() {
+        System.out.println(expiryDate);
         return id>0 && projectName!=null && !projectName.isEmpty() && creationDate!=null && !creationDate.isEmpty() &&
-                expiryDate!=null && !expiryDate.isEmpty() && enabled!=null &&targetCountries!=null && !targetCountries.isEmpty() &&
+                expiryDate!=null && !expiryDate.isEmpty() && targetCountries!=null && !targetCountries.isEmpty() &&
                 projectCost>=0 && projectUrl!=null && !projectUrl.isEmpty();
     }
 }

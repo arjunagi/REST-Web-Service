@@ -9,29 +9,37 @@ import java.util.*;
 public class CreateProjectService {
 
     /**
-     * Handles request which has a single Json object. Validates the data before adding it in projects.txt.
+     * Handles request which has a single Json object.
+     * Checks if the keys in the json data is from the list of accepted keys.
+     * Checks if the data values are valid.
      * @param request
-     * @return Response with appropriate status code and message.
+     * @return Success response on project creation.
+     *         403 for invalid values, if keys are invalid.
+     *         500 for error during file writing
      */
     public ResponseMessageWithStatusCode createSingleProject(Request request) {
 
         if(!isProjectKeysValid(request.body())) {
-            return new ResponseMessageWithStatusCode("Invalid key in data", 400);
+            return new ResponseMessageWithStatusCode("Invalid key in data", 403);
         }
 
         Project project = new Gson().fromJson(request.body(), Project.class);
 
         if (!project.isValid()) {
-            return new ResponseMessageWithStatusCode("Data is invalid", 400);
+            return new ResponseMessageWithStatusCode("Data is invalid", 403);
         }
 
         return writeProjectToFile(project);
     }
 
     /**
-     * Handles request which has a array of Json. Validates the data before adding it in projects.txt.
+     * Handles request which has a array of Json.
+     * For each project, checks if the keys in the json data is from the list of accepted keys.
+     * For each project, checks if the data values are valid.
      * @param request
-     * @return Response with appropriate status code and message.
+     * @return Success response on project creation.
+     *         403 for invalid values, if keys are invalid.
+     *         500 for error during file writing
      */
     public ResponseMessageWithStatusCode createMultipleProjects(Request request) {
 
@@ -44,12 +52,12 @@ public class CreateProjectService {
             JsonElement jsonElement = jsonArray.get(i);
 
             if(!isProjectKeysValid(jsonElement.toString()))
-                return new ResponseMessageWithStatusCode("Invalid key in data", 400);
+                return new ResponseMessageWithStatusCode("Invalid key in data", 403);
 
             Project project = new Gson().fromJson(jsonElement.toString(), Project.class);
 
             if (!project.isValid()) {
-                 return new ResponseMessageWithStatusCode("Data is invalid", 400);
+                 return new ResponseMessageWithStatusCode("Data is invalid", 403);
             }
 
             responseMessageWithStatusCode = writeProjectToFile(project);

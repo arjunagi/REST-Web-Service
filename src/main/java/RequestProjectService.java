@@ -17,7 +17,9 @@ public class RequestProjectService {
     /**
      * If request is valid, searches for project based on rules.
      * @param request
-     * @return project data if found or else appropriate messages with status codes.
+     * @return project data if found
+     *         403 for invalid parameters
+     *         500 for errors during file read
      */
     public Response requestProject(Request request) {
 
@@ -28,7 +30,7 @@ public class RequestProjectService {
             return getHighestCostProject();
 
         if(!areParametersCorrect())
-            return new ResponseMessageWithStatusCode("Invalid parameter in the request", 400);
+            return new ResponseMessageWithStatusCode("Invalid parameter in the request", 403);
 
         return getProject();
     }
@@ -189,7 +191,7 @@ public class RequestProjectService {
      * @return true if project passes all these rules, else false.
      */
     private boolean passesAllBasicRules(Project project) {
-        if(!project.isValid() || project.getEnabled().equals(false) || isExpired(project.getExpiryDate()) || project.getProjectUrl().equals(null))
+        if(!project.isValid() || !project.isEnabled() || isExpired(project.getExpiryDate()) || project.getProjectUrl().equals(null))
             return false;
         return true;
     }
