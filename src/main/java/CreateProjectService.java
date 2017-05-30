@@ -22,14 +22,12 @@ public class CreateProjectService {
         if(!isProjectKeysValid(request.body())) {
             return new ResponseMessageWithStatusCode("Invalid key in data", 403);
         }
-
         Project project = new Gson().fromJson(request.body(), Project.class);
-
         if (!project.isValid()) {
             return new ResponseMessageWithStatusCode("Data is invalid", 403);
         }
-
         return writeProjectToFile(project);
+
     }
 
     /**
@@ -57,7 +55,7 @@ public class CreateProjectService {
             Project project = new Gson().fromJson(jsonElement.toString(), Project.class);
 
             if (!project.isValid()) {
-                 return new ResponseMessageWithStatusCode("Data is invalid", 403);
+                return new ResponseMessageWithStatusCode("Data is invalid", 403);
             }
 
             responseMessageWithStatusCode = writeProjectToFile(project);

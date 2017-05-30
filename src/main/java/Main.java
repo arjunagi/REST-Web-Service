@@ -72,6 +72,7 @@ public class Main {
                 }
                 return gson.toJson(responseMessageWithStatusCode);
             } catch (JsonParseException e) {
+                response.status(400);
                 return gson.toJson(new ResponseMessageWithStatusCode(e, 400));
             }
         });
