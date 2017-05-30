@@ -81,9 +81,8 @@ public class RequestProjectService {
      */
     private Response getProjectBasedOnId() {
 
-        int projectId = Integer.parseInt(this.parameterMap.get("projectid")[0]);
-
         try(BufferedReader br = new BufferedReader(new FileReader("projects.txt"))) {
+            int projectId = Integer.parseInt(this.parameterMap.get("projectid")[0]);
             for(String line; (line = br.readLine()) != null; ) {
                 Project project = new Gson().fromJson(line, Project.class);
                 if(passesAllBasicRules(project) && project.getId() == projectId) {
@@ -204,7 +203,11 @@ public class RequestProjectService {
         String[] tempValidParameters = new String[] { "projectid", "country", "number","keyword" };
         Set<String> validParameters = new HashSet<String >(Arrays.asList(tempValidParameters));
         Set<String> parameters = this.parameterMap.keySet();
-        return validParameters.containsAll(parameters);
+        for(String p : parameters) {
+            if(this.parameterMap.get(p)[0].equals("") || !validParameters.contains(p))
+                return false;
+        }
+        return true;
     }
 
     /**
