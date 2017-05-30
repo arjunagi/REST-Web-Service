@@ -1,12 +1,7 @@
 import com.google.gson.*;
-import com.google.gson.reflect.TypeToken;
 import spark.Request;
-
-import java.awt.*;
 import java.io.*;
-import java.lang.reflect.Type;
 import java.util.*;
-import java.util.List;
 
 /**
  * Created by Karthik on 5/27/17.
@@ -72,7 +67,7 @@ public class CreateProjectService {
      */
     private ResponseMessageWithStatusCode createProject(Project project) {
 
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
         BufferedWriter writer = null;
         ResponseMessageWithStatusCode responseMessageWithStatusCode = null;
 

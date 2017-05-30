@@ -20,10 +20,13 @@ public class RequestProjectService {
         String projectId = request.queryParams("projectid");
 
         Map<String, String[]> parameterMap = request.queryMap().toMap();
+
         if(parameterMap.isEmpty())
             return getHighestCostProject();
-        if(!validateParameterMap(parameterMap))
+
+        if(!areParametersCorrect(parameterMap))
             return new ResponseMessageWithStatusCode("Invalid parameter in the request", 400);
+
         return getProject(projectId, parameterMap);
     }
 
@@ -34,50 +37,11 @@ public class RequestProjectService {
      */
     private Response getProject(String projectId, Map<String, String[]> parameterMap) {
 
-        try(BufferedReader br = new BufferedReader(new FileReader("projects.txt"))) {
-            for(String line; (line = br.readLine()) != null; ) {
-                Project project = new Gson().fromJson(line, Project.class);
-                if(!project.isValid())
-                    return new ResponseMessageWithStatusCode("Project data error", 500);
-                if(project.getId() == Integer.parseInt(projectId)) {
-                    return new ResponseProject(project.getProjectName(), project.getProjectCost(), project.getProjectUrl());
-                }
-                else {
-                    return  new ResponseMessage("no project found");
-                }
-            }
-        } catch (Exception e) {
-            return new ResponseMessageWithStatusCode(e + "Error during file read", 500);
-        }
-        return null;
-    }
+        if(parameterMap.keySet().contains("projectid"))
+            return getProjectBasedOnId(parameterMap);
 
-    /**
-     *
-     * @param parameterMap
-     * @return
-     */
-    private boolean validateParameterMap(Map<String, String[]> parameterMap) {
-        String[] tempValidParameters = new String[] { "projectid", "country", "number","keyword" };
-        Set<String> validParameters = new HashSet<String >(Arrays.asList(tempValidParameters));
-        Set<String> parameters = parameterMap.keySet();
-
-        for(String param: parameters) {
-            if(!validParameters.contains(param))
-                return false;
-        }
-        return true;
-    }
-
-    /**
-     *
-     * @param parameterMap
-     * @param project
-     * @return
-     */
-    private boolean passesAllRules(Map<String,String[]> parameterMap, Project project) {
-
-        return true;
+        else
+            return getProjectsBasedOnParams(parameterMap);
     }
 
     /**
@@ -90,14 +54,9 @@ public class RequestProjectService {
         double highestCost = Double.MIN_VALUE;
 
         try(BufferedReader br = new BufferedReader(new FileReader("projects.txt"))) {
-
             for(String line; (line = br.readLine()) != null; ) {
-
                 Project project = new Gson().fromJson(line, Project.class);
-
-                if(!project.isValid() || project.getEnabled().equals(false) || isExpired(project.getExpiryDate()) || project.getProjectUrl().equals(null))
-                    continue;
-                else if(project.getProjectCost() > highestCost) {
+                if(passesAllBasicRules(project) && project.getProjectCost() > highestCost) {
                     highestCost = project.getProjectCost();
                     highestCostProject = project;
                 }
@@ -108,10 +67,132 @@ public class RequestProjectService {
             else {
                 return new ResponseProject(highestCostProject.getProjectName(), highestCostProject.getProjectCost(), highestCostProject.getProjectUrl());
             }
-
         } catch (Exception e) {
             return new ResponseMessageWithStatusCode(e + ": Error during file read", 500);
         }
+    }
+
+    /**
+     *
+     * @param parameterMap
+     * @return
+     */
+    private Response getProjectBasedOnId(Map<String, String[]> parameterMap) {
+
+        int projectId = Integer.parseInt(parameterMap.get("projectid")[0]);
+
+        try(BufferedReader br = new BufferedReader(new FileReader("projects.txt"))) {
+            for(String line; (line = br.readLine()) != null; ) {
+                Project project = new Gson().fromJson(line, Project.class);
+                if(passesAllBasicRules(project) && project.getId() == projectId) {
+                    return new ResponseProject(project.getProjectName(), project.getProjectCost(), project.getProjectUrl());
+                }
+            }
+            return new ResponseMessage("no project found");
+        } catch (Exception e) {
+            return new ResponseMessageWithStatusCode(e + ": Error during file read", 500);
+        }
+    }
+
+    /**
+     * Not project ID
+     * @param parameterMap
+     * @return
+     */
+    private Response getProjectsBasedOnParams(Map<String, String[]> parameterMap) {
+
+        try(BufferedReader br = new BufferedReader(new FileReader("projects.txt"))) {
+            Project highestCostProject = null;
+            double highestCost = Double.MIN_VALUE;
+
+            for(String line; (line = br.readLine()) != null; ) {
+                Project project = new Gson().fromJson(line, Project.class);
+                if(passesAllBasicRules(project) && checkParameterValueMatches(project, parameterMap)) {
+                    if(project.getProjectCost() > highestCost) {
+                        highestCost = project.getProjectCost();
+                        highestCostProject = project;
+                    }
+                }
+            }
+            if(highestCost == Double.MIN_VALUE )
+                return new ResponseMessage("no project found");
+            else {
+                return new ResponseProject(highestCostProject.getProjectName(), highestCostProject.getProjectCost(), highestCostProject.getProjectUrl());
+            }
+        } catch (Exception e) {
+            return new ResponseMessageWithStatusCode(e + ": Error during file read", 500);
+        }
+    }
+
+    /**
+     *
+     * @param project
+     * @param parameterMap
+     * @return
+     */
+    private boolean checkParameterValueMatches(Project project, Map<String, String[]> parameterMap) {
+
+        for(String p: parameterMap.keySet()) {
+
+            if(p.equals("country")) {
+                if(! project.getTargetCountries().contains(parameterMap.get(p)[0].toUpperCase()))
+                    return false;
+            }
+
+            else if(p.equals("number")) {
+                for (TargetKeys t : project.getTargetKeys()) {
+                    if(Integer.parseInt(parameterMap.get(p)[0]) <= t.getNumber()) {
+                        if(parameterMap.keySet().contains("keyword")) {
+                            if(t.getKeyword().equals(parameterMap.get("keyword")[0]))
+                                return true;
+                            else continue;
+                        }
+                        else return true;
+                    }
+                    else continue;
+                }
+                return false;
+            }
+
+            else if(p.equals("keyword")) {
+                for (TargetKeys t : project.getTargetKeys()) {
+                    if(t.getKeyword().equals(parameterMap.get(p)[0])) {
+                        if(parameterMap.keySet().contains("number")) {
+                            if(Integer.parseInt(parameterMap.get("number")[0]) < t.getNumber())
+                                return true;
+                            else continue;
+                        }
+                        else return true;
+                    }
+                    else continue;
+                }
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     *
+     * @param parameterMap
+     * @return
+     */
+    private boolean areParametersCorrect(Map<String, String[]> parameterMap) {
+        String[] tempValidParameters = new String[] { "projectid", "country", "number","keyword" };
+        Set<String> validParameters = new HashSet<String >(Arrays.asList(tempValidParameters));
+        Set<String> parameters = parameterMap.keySet();
+        return validParameters.containsAll(parameters);
+    }
+
+    /**
+     *
+     * @param project
+     * @return
+     */
+    private boolean passesAllBasicRules(Project project) {
+        if(!project.isValid() || project.getEnabled().equals(false) || isExpired(project.getExpiryDate()) || project.getProjectUrl().equals(null))
+            return false;
+        return true;
     }
 
     /**
