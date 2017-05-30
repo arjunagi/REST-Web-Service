@@ -1,5 +1,5 @@
 /**
- * Created by Karthik on 5/28/17.
+ * Abstract class to create response messages.
  */
 public abstract class Response {
     public String message;

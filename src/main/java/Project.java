@@ -2,7 +2,7 @@ import lombok.Data;
 import java.util.ArrayList;
 
 /**
- * Created by Karthik on 5/27/17.
+ * Class to store the project data as an object and convert to Json object.
  */
 
 @Data
@@ -24,6 +24,9 @@ public class Project {
     }
 }
 
+/**
+ * Class to store the "targetKeys" json array.
+ */
 @Data
 class TargetKeys {
     TargetKeys(TargetKeys targetKeys) {

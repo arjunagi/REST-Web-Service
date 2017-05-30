@@ -1,7 +1,7 @@
 import lombok.Data;
 
 /**
- * Created by Karthik on 5/27/17.
+ * Class to create responses with status code and message.
  */
 @Data
 public class ResponseMessageWithStatusCode extends Response{

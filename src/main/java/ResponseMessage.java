@@ -1,5 +1,5 @@
 /**
- * Created by Karthik on 5/28/17.
+ * Class to create response message.
  */
 public class ResponseMessage extends Response {
 

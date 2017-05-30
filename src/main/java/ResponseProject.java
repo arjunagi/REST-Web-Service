@@ -1,7 +1,7 @@
 import lombok.Data;
 
 /**
- * Created by Karthik on 5/28/17.
+ * Class to create the response message with project data.
  */
 @Data
 public class ResponseProject extends Response{

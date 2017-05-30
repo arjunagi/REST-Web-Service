@@ -4,14 +4,14 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Created by Karthik on 5/27/17.
+ * Class to handle the creatproject request.
  */
 public class CreateProjectService {
 
     /**
-     *
+     * Handles request which has a single Json object. Validates the data before adding it in projects.txt.
      * @param request
-     * @return
+     * @return Response with appropriate status code and message.
      */
     public ResponseMessageWithStatusCode createSingleProject(Request request) {
 
@@ -25,13 +25,13 @@ public class CreateProjectService {
             return new ResponseMessageWithStatusCode("Data is invalid", 400);
         }
 
-        return createProject(project);
+        return writeProjectToFile(project);
     }
 
     /**
-     *
+     * Handles request which has a array of Json. Validates the data before adding it in projects.txt.
      * @param request
-     * @return
+     * @return Response with appropriate status code and message.
      */
     public ResponseMessageWithStatusCode createMultipleProjects(Request request) {
 
@@ -52,7 +52,7 @@ public class CreateProjectService {
                  return new ResponseMessageWithStatusCode("Data is invalid", 400);
             }
 
-            responseMessageWithStatusCode = createProject(project);
+            responseMessageWithStatusCode = writeProjectToFile(project);
             if (responseMessageWithStatusCode.getStatusCode() != 200)
                 return responseMessageWithStatusCode;
         }
@@ -61,13 +61,13 @@ public class CreateProjectService {
     }
 
     /**
-     *
+     * Writes the valid project to projects.txt.
      * @param project
-     * @return
+     * @return Response with appropriate status code and message.
      */
-    private ResponseMessageWithStatusCode createProject(Project project) {
+    private ResponseMessageWithStatusCode writeProjectToFile(Project project) {
 
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        Gson gson = new Gson();
         BufferedWriter writer = null;
         ResponseMessageWithStatusCode responseMessageWithStatusCode = null;
 
@@ -90,9 +90,9 @@ public class CreateProjectService {
     }
 
     /**
-     *
+     * Checks if the keys in Json data are from the list of accepted keys.
      * @param request
-     * @return
+     * @return true if the keys in the data are correct, else false.
      */
     private boolean isProjectKeysValid(String request) {
 

@@ -557,3 +557,378 @@ Content-Type: application/json
 2017-05-29 20:19:56 INFO  session:149 - Scavenging every 660000ms
 2017-05-29 20:19:56 INFO  AbstractConnector:280 - Started ServerConnector@54512a5a{HTTP/1.1,[http/1.1]}{0.0.0.0:5000}
 2017-05-29 20:19:56 INFO  Server:444 - Started @2059ms
+2017-05-29 20:47:52 INFO  log:192 - Logging initialized @739ms to org.eclipse.jetty.util.log.Slf4jLog
+2017-05-29 20:47:52 INFO  EmbeddedJettyServer:127 - == Spark has ignited ...
+2017-05-29 20:47:52 INFO  EmbeddedJettyServer:128 - >> Listening on 0.0.0.0:5000
+2017-05-29 20:47:52 INFO  Server:372 - jetty-9.4.4.v20170414
+2017-05-29 20:47:52 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2017-05-29 20:47:52 INFO  session:369 - No SessionScavenger set, using defaults
+2017-05-29 20:47:52 INFO  session:149 - Scavenging every 660000ms
+2017-05-29 20:47:52 INFO  AbstractConnector:280 - Started ServerConnector@6672870f{HTTP/1.1,[http/1.1]}{0.0.0.0:5000}
+2017-05-29 20:47:52 INFO  Server:444 - Started @1074ms
+2017-05-29 20:48:00 INFO  Main:37 - 
+GET http://localhost:5000/requestproject?country=usa&number=29&keyword=sports&projectid=1
+
+2017-05-29 20:48:00 INFO  Main:44 - 
+HTTP/1.1 200 
+Date: Tue, 30 May 2017 03:48:00 GMT
+Content-Type: application/json
+
+{
+  "projectName": "test project number 1",
+  "projectCost": 7.0,
+  "projectUrl": "http://www.unity3d.com"
+}
+
+2017-05-29 20:48:03 INFO  Main:37 - 
+POST http://localhost:5000/createproject
+{
+"id": 1,
+
+"projectName": "test project number 1",
+
+"creationDate": "05112017 00:00:00",
+
+"expiryDate" : "05202017 00:00:00",
+
+"enabled": true,
+
+"targetCountries": ["USA", "CANADA", "MEXICO", "BRAZIL"],
+
+"projectCost": 5.5,
+
+"projectUrl": "http://www.unity3d.com",
+
+"targetKeys": [{
+
+"number": 25,
+
+"keyword": "movie"
+
+},
+
+{
+
+"number": 30,
+
+"keyword":"sports"
+
+}]
+
+}
+
+2017-05-29 20:48:03 INFO  Main:44 - 
+HTTP/1.1 200 
+Date: Tue, 30 May 2017 03:48:03 GMT
+Content-Type: application/json
+
+{
+  "statusCode": 200,
+  "message": "campaign is successfully created"
+}
+
+2017-05-29 20:50:34 INFO  log:192 - Logging initialized @649ms to org.eclipse.jetty.util.log.Slf4jLog
+2017-05-29 20:50:34 INFO  EmbeddedJettyServer:127 - == Spark has ignited ...
+2017-05-29 20:50:34 INFO  EmbeddedJettyServer:128 - >> Listening on 0.0.0.0:5000
+2017-05-29 20:50:34 INFO  Server:372 - jetty-9.4.4.v20170414
+2017-05-29 20:50:35 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2017-05-29 20:50:35 INFO  session:369 - No SessionScavenger set, using defaults
+2017-05-29 20:50:35 INFO  session:149 - Scavenging every 600000ms
+2017-05-29 20:50:35 INFO  AbstractConnector:280 - Started ServerConnector@6672870f{HTTP/1.1,[http/1.1]}{0.0.0.0:5000}
+2017-05-29 20:50:35 INFO  Server:444 - Started @903ms
+2017-05-29 20:50:38 INFO  Main:37 - 
+POST http://localhost:5000/createproject
+{
+"id": 1,
+
+"projectName": "test project number 1",
+
+"creationDate": "05112017 00:00:00",
+
+"expiryDate" : "05202017 00:00:00",
+
+"enabled": true,
+
+"targetCountries": ["USA", "CANADA", "MEXICO", "BRAZIL"],
+
+"projectCost": 5.5,
+
+"projectUrl": "http://www.unity3d.com",
+
+"targetKeys": [{
+
+"number": 25,
+
+"keyword": "movie"
+
+},
+
+{
+
+"number": 30,
+
+"keyword":"sports"
+
+}]
+
+}
+
+2017-05-29 20:50:38 INFO  Main:44 - 
+HTTP/1.1 200 
+Date: Tue, 30 May 2017 03:50:38 GMT
+Content-Type: application/json
+
+{
+  "statusCode": 200,
+  "message": "campaign is successfully created"
+}
+
+2017-05-29 20:50:42 INFO  Main:37 - 
+GET http://localhost:5000/requestproject?country=usa&number=29&keyword=sports&projectid=1
+
+2017-05-29 20:50:42 INFO  Main:44 - 
+HTTP/1.1 200 
+Date: Tue, 30 May 2017 03:50:42 GMT
+Content-Type: application/json
+
+{
+  "projectName": "test project number 1",
+  "projectCost": 7.0,
+  "projectUrl": "http://www.unity3d.com"
+}
+
+2017-05-29 20:50:45 INFO  Main:37 - 
+GET http://localhost:5000/requestproject?country=usa&projectid=1
+
+2017-05-29 20:50:45 INFO  Main:44 - 
+HTTP/1.1 200 
+Date: Tue, 30 May 2017 03:50:45 GMT
+Content-Type: application/json
+
+{
+  "projectName": "test project number 1",
+  "projectCost": 7.0,
+  "projectUrl": "http://www.unity3d.com"
+}
+
+2017-05-29 20:50:48 INFO  Main:37 - 
+GET http://localhost:5000/requestproject
+
+2017-05-29 20:50:48 INFO  Main:44 - 
+HTTP/1.1 500 
+Date: Tue, 30 May 2017 03:50:48 GMT
+Content-Type: application/json
+
+{
+  "statusCode": 500,
+  "message": "com.google.gson.JsonSyntaxException: java.io.EOFException: End of input at line 1 column 2 path $.: Error during file read"
+}
+
+2017-05-29 20:52:18 INFO  log:192 - Logging initialized @784ms to org.eclipse.jetty.util.log.Slf4jLog
+2017-05-29 20:52:18 INFO  EmbeddedJettyServer:127 - == Spark has ignited ...
+2017-05-29 20:52:18 INFO  EmbeddedJettyServer:128 - >> Listening on 0.0.0.0:5000
+2017-05-29 20:52:18 INFO  Server:372 - jetty-9.4.4.v20170414
+2017-05-29 20:52:18 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2017-05-29 20:52:18 INFO  session:369 - No SessionScavenger set, using defaults
+2017-05-29 20:52:18 INFO  session:149 - Scavenging every 660000ms
+2017-05-29 20:52:18 INFO  AbstractConnector:280 - Started ServerConnector@32958152{HTTP/1.1,[http/1.1]}{0.0.0.0:5000}
+2017-05-29 20:52:18 INFO  Server:444 - Started @1023ms
+2017-05-29 20:52:20 INFO  Main:37 - 
+POST http://localhost:5000/createproject[
+   {
+      "id":1,
+      "projectName":"test project number 1",
+      "creationDate":"05112017 00:00:00",
+      "expiryDate":"05202017 00:00:00",
+      "enabled":true,
+      "targetCountries":[
+         "USA",
+         "CANADA",
+         "MEXICO",
+         "BRAZIL"
+      ],
+      "projectCost":5.5,
+      "projectUrl":"http://www.unity3d.com",
+      "targetKeys":[
+         {
+            "number":25,
+            "keyword":"movie"
+         },
+         {
+            "number":30,
+            "keyword":"sports"
+         }
+      ]
+   },
+   {
+      "id":2,
+      "projectName":"test project number 2",
+      "creationDate":"05112017 00:00:00",
+      "expiryDate":"05202017 00:00:00",
+      "enabled":true,
+      "targetCountries":[
+         "USA",
+         "CANADA",
+         "MEXICO",
+         "BRAZIL"
+      ],
+      "projectCost":6.0,
+      "projectUrl":"http://www.unity3d.com",
+      "targetKeys":[
+         {
+            "number":25,
+            "keyword":"movie"
+         },
+         {
+            "number":30,
+            "keyword":"sports"
+         }
+      ]
+   }
+]
+
+2017-05-29 20:52:20 INFO  Main:44 - 
+HTTP/1.1 200 
+Date: Tue, 30 May 2017 03:52:20 GMT
+Content-Type: application/json
+
+{
+  "statusCode": 200,
+  "message": "campaign is successfully created"
+}
+
+2017-05-29 20:52:26 INFO  Main:37 - 
+GET http://localhost:5000/requestproject?country=usa&projectid=1
+
+2017-05-29 20:52:26 INFO  Main:44 - 
+HTTP/1.1 200 
+Date: Tue, 30 May 2017 03:52:26 GMT
+Content-Type: application/json
+
+{
+  "message": "no project found"
+}
+
+2017-05-29 20:52:42 INFO  Main:37 - 
+GET http://localhost:5000/requestproject
+
+2017-05-29 20:52:42 INFO  Main:44 - 
+HTTP/1.1 200 
+Date: Tue, 30 May 2017 03:52:42 GMT
+Content-Type: application/json
+
+{
+  "message": "no project found"
+}
+
+2017-05-29 20:52:54 INFO  Main:37 - 
+GET http://localhost:5000/requestproject
+
+2017-05-29 20:52:54 INFO  Main:44 - 
+HTTP/1.1 200 
+Date: Tue, 30 May 2017 03:52:54 GMT
+Content-Type: application/json
+
+{
+  "projectName": "test project number 2",
+  "projectCost": 6.0,
+  "projectUrl": "http://www.unity3d.com"
+}
+
+2017-05-29 21:05:33 INFO  log:192 - Logging initialized @669ms to org.eclipse.jetty.util.log.Slf4jLog
+2017-05-29 21:05:33 INFO  EmbeddedJettyServer:127 - == Spark has ignited ...
+2017-05-29 21:05:33 INFO  EmbeddedJettyServer:128 - >> Listening on 0.0.0.0:5000
+2017-05-29 21:05:33 INFO  Server:372 - jetty-9.4.4.v20170414
+2017-05-29 21:05:33 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2017-05-29 21:05:33 INFO  session:369 - No SessionScavenger set, using defaults
+2017-05-29 21:05:33 INFO  session:149 - Scavenging every 600000ms
+2017-05-29 21:05:33 INFO  AbstractConnector:280 - Started ServerConnector@6becbe51{HTTP/1.1,[http/1.1]}{0.0.0.0:5000}
+2017-05-29 21:05:33 INFO  Server:444 - Started @933ms
+2017-05-29 21:05:42 INFO  Main:37 - 
+GET http://localhost:5000/requestproject
+
+2017-05-29 21:05:42 INFO  Main:44 - 
+HTTP/1.1 200 
+Date: Tue, 30 May 2017 04:05:42 GMT
+Content-Type: application/json
+
+{
+  "projectName": "test project number 2",
+  "projectCost": 6.0,
+  "projectUrl": "http://www.unity3d.com"
+}
+
+2017-05-29 21:05:45 INFO  Main:37 - 
+POST http://localhost:5000/createproject
+{
+"id": 1,
+
+"projectName": "test project number 1",
+
+"creationDate": "05112017 00:00:00",
+
+"expiryDate" : "05202017 00:00:00",
+
+"enabled": true,
+
+"targetCountries": ["USA", "CANADA", "MEXICO", "BRAZIL"],
+
+"projectCost": 5.5,
+
+"projectUrl": "http://www.unity3d.com",
+
+"targetKeys": [{
+
+"number": 25,
+
+"keyword": "movie"
+
+},
+
+{
+
+"number": 30,
+
+"keyword":"sports"
+
+}]
+
+}
+
+2017-05-29 21:05:45 INFO  Main:44 - 
+HTTP/1.1 200 
+Date: Tue, 30 May 2017 04:05:45 GMT
+Content-Type: application/json
+
+{
+  "statusCode": 200,
+  "message": "campaign is successfully created"
+}
+
+2017-05-29 21:18:15 INFO  log:192 - Logging initialized @1313ms to org.eclipse.jetty.util.log.Slf4jLog
+2017-05-29 21:18:15 INFO  EmbeddedJettyServer:127 - == Spark has ignited ...
+2017-05-29 21:18:15 INFO  EmbeddedJettyServer:128 - >> Listening on 0.0.0.0:5000
+2017-05-29 21:18:15 INFO  Server:372 - jetty-9.4.4.v20170414
+2017-05-29 21:18:15 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2017-05-29 21:18:15 INFO  session:369 - No SessionScavenger set, using defaults
+2017-05-29 21:18:15 INFO  session:149 - Scavenging every 600000ms
+2017-05-29 21:18:16 INFO  AbstractConnector:280 - Started ServerConnector@eb382db{HTTP/1.1,[http/1.1]}{0.0.0.0:5000}
+2017-05-29 21:18:16 INFO  Server:444 - Started @2288ms
+2017-05-29 21:32:36 INFO  log:192 - Logging initialized @1320ms to org.eclipse.jetty.util.log.Slf4jLog
+2017-05-29 21:32:36 INFO  EmbeddedJettyServer:127 - == Spark has ignited ...
+2017-05-29 21:32:36 INFO  EmbeddedJettyServer:128 - >> Listening on 0.0.0.0:5000
+2017-05-29 21:32:36 INFO  Server:372 - jetty-9.4.4.v20170414
+2017-05-29 21:32:36 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2017-05-29 21:32:36 INFO  session:369 - No SessionScavenger set, using defaults
+2017-05-29 21:32:36 INFO  session:149 - Scavenging every 600000ms
+2017-05-29 21:32:36 INFO  AbstractConnector:280 - Started ServerConnector@eb382db{HTTP/1.1,[http/1.1]}{0.0.0.0:5000}
+2017-05-29 21:32:36 INFO  Server:444 - Started @2045ms
+2017-05-29 21:32:57 INFO  log:192 - Logging initialized @606ms to org.eclipse.jetty.util.log.Slf4jLog
+2017-05-29 21:32:57 INFO  EmbeddedJettyServer:127 - == Spark has ignited ...
+2017-05-29 21:32:57 INFO  EmbeddedJettyServer:128 - >> Listening on 0.0.0.0:5000
+2017-05-29 21:32:57 INFO  Server:372 - jetty-9.4.4.v20170414
+2017-05-29 21:32:57 INFO  session:364 - DefaultSessionIdManager workerName=node0
+2017-05-29 21:32:57 INFO  session:369 - No SessionScavenger set, using defaults
+2017-05-29 21:32:57 INFO  session:149 - Scavenging every 600000ms
+2017-05-29 21:32:57 INFO  AbstractConnector:280 - Started ServerConnector@764abea8{HTTP/1.1,[http/1.1]}{0.0.0.0:5000}
+2017-05-29 21:32:57 INFO  Server:444 - Started @885ms
