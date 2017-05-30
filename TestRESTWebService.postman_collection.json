@@ -19,11 +19,11 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
 									"",
 									"",
 									"var jsonData = JSON.parse(responseBody);",
-									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"statusCode\"] = jsonData.statusCode === 400;",
 									"tests[\"message\"] = jsonData.message === \"Invalid parameter in the request\";"
 								]
 							}
@@ -172,11 +172,11 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
 									"",
 									"",
 									"var jsonData = JSON.parse(responseBody);",
-									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"statusCode\"] = jsonData.statusCode === 400;",
 									"tests[\"message\"] = jsonData.message === \"Invalid parameter in the request\";"
 								]
 							}
@@ -537,11 +537,11 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
 									"",
 									"",
 									"var jsonData = JSON.parse(responseBody);",
-									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"statusCode\"] = jsonData.statusCode === 400;",
 									"tests[\"message\"] = jsonData.message === \"Data is invalid\";"
 								]
 							}
@@ -573,11 +573,11 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
 									"",
 									"",
 									"var jsonData = JSON.parse(responseBody);",
-									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"statusCode\"] = jsonData.statusCode === 400;",
 									"tests[\"message\"] = jsonData.message === \"Data is invalid\";"
 								]
 							}
@@ -609,11 +609,11 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
 									"",
 									"",
 									"var jsonData = JSON.parse(responseBody);",
-									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"statusCode\"] = jsonData.statusCode === 400;",
 									"tests[\"message\"] = jsonData.message === \"Invalid key in data\";"
 								]
 							}
@@ -645,11 +645,11 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
 									"",
 									"",
 									"var jsonData = JSON.parse(responseBody);",
-									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"statusCode\"] = jsonData.statusCode === 400;",
 									"tests[\"message\"] = jsonData.message === \"Invalid key in data\";"
 								]
 							}
@@ -681,11 +681,11 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
 									"",
 									"",
 									"var jsonData = JSON.parse(responseBody);",
-									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"statusCode\"] = jsonData.statusCode === 400;",
 									"tests[\"message\"] = jsonData.message === \"Data is invalid\";"
 								]
 							}
@@ -753,11 +753,11 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
 									"",
 									"",
 									"var jsonData = JSON.parse(responseBody);",
-									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"statusCode\"] = jsonData.statusCode === 400;",
 									"tests[\"message\"] = jsonData.message === \"Data is invalid\";"
 								]
 							}
@@ -1237,11 +1237,11 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"tests[\"Status code is 403\"] = responseCode.code === 403;",
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
 									"",
 									"",
 									"var jsonData = JSON.parse(responseBody);",
-									"tests[\"statusCode\"] = jsonData.statusCode === 403;",
+									"tests[\"statusCode\"] = jsonData.statusCode === 400;",
 									"tests[\"message\"] = jsonData.message === \"Invalid key in data\";"
 								]
 							}

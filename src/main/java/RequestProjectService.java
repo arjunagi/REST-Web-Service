@@ -30,7 +30,7 @@ public class RequestProjectService {
             return getHighestCostProject();
 
         if(!areParametersCorrect())
-            return new ResponseMessageWithStatusCode("Invalid parameter in the request", 403);
+            return new ResponseMessageWithStatusCode("Invalid parameter in the request", 400);
 
         return getProject();
     }

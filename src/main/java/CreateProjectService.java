@@ -20,11 +20,11 @@ public class CreateProjectService {
     public ResponseMessageWithStatusCode createSingleProject(Request request) {
 
         if(!isProjectKeysValid(request.body())) {
-            return new ResponseMessageWithStatusCode("Invalid key in data", 403);
+            return new ResponseMessageWithStatusCode("Invalid key in data", 400);
         }
         Project project = new Gson().fromJson(request.body(), Project.class);
         if (!project.isValid()) {
-            return new ResponseMessageWithStatusCode("Data is invalid", 403);
+            return new ResponseMessageWithStatusCode("Data is invalid", 400);
         }
         return writeProjectToFile(project);
 
@@ -50,12 +50,12 @@ public class CreateProjectService {
             JsonElement jsonElement = jsonArray.get(i);
 
             if(!isProjectKeysValid(jsonElement.toString()))
-                return new ResponseMessageWithStatusCode("Invalid key in data", 403);
+                return new ResponseMessageWithStatusCode("Invalid key in data", 400);
 
             Project project = new Gson().fromJson(jsonElement.toString(), Project.class);
 
             if (!project.isValid()) {
-                return new ResponseMessageWithStatusCode("Data is invalid", 403);
+                return new ResponseMessageWithStatusCode("Data is invalid", 400);
             }
 
             responseMessageWithStatusCode = writeProjectToFile(project);

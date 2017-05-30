@@ -67,7 +67,7 @@ public class Main {
                     response.status(responseMessageWithStatusCode.getStatusCode());
                 }
                 else {
-                    response.status(403);
+                    response.status(400);
                     responseMessageWithStatusCode = new ResponseMessageWithStatusCode("Data is invalid", response.status());
                 }
                 return gson.toJson(responseMessageWithStatusCode);
