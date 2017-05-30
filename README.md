@@ -19,5 +19,12 @@ java -jar UnityRestWebService.jar
 4. The projects will be stored in the file "projects.txt" in the same location as the jar
 5. The server logs will be stored in the file "web_service_logs.txt" in the same location as the jar
 
-## Testing the Webservice
-
+## Testing the Webservice Using Postman
+Import the file "TestRESTWebService.postman_collection.json" to Postman. This will create a "TestRESTWebService" folder in Postman.
+### Sending Large Number of createproject Requests
+1. Click on Runner and choose the collection TestRESTWebService -> POST - Many successful request
+2. Set Iterations as 1000
+3. Start Run
+### Sending Invalid Data in createproject Requests
+1. Click on Runner and choose the collection TestRESTWebService -> POST - Invalid Requests
+2. Start Run
