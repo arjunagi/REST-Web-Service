@@ -1,8 +1,8 @@
 {
-	"id": "a0843cda-83db-4c7c-9abf-da36147a3774",
+	"id": "f48ab0af-e734-4c3c-b0e0-fccd46074ae4",
 	"name": "TestRESTWebService",
 	"allTests": [],
-	"timestamp": "2017-05-30T10:15:02.122Z",
+	"timestamp": "2017-05-30T10:24:54.936Z",
 	"collection_id": "5dfa2471-ea6c-64f2-fad9-a6646f43c894",
 	"folder_id": 0,
 	"target_type": "collection",
@@ -166,7 +166,7 @@
 				}
 			},
 			"times": [
-				"382"
+				"62"
 			],
 			"allTests": [
 				{
@@ -175,8 +175,8 @@
 					"message": true
 				}
 			],
-			"time": "382",
-			"totalRequestTime": "382",
+			"time": "62",
+			"totalRequestTime": "62",
 			"iterationResults": {}
 		},
 		{
@@ -207,7 +207,7 @@
 				}
 			},
 			"times": [
-				"1379"
+				"1574"
 			],
 			"allTests": [
 				{
@@ -215,8 +215,8 @@
 					"message": true
 				}
 			],
-			"time": "1379",
-			"totalRequestTime": "1379",
+			"time": "1574",
+			"totalRequestTime": "1574",
 			"iterationResults": {}
 		},
 		{
@@ -247,7 +247,7 @@
 				}
 			},
 			"times": [
-				"418"
+				"581"
 			],
 			"allTests": [
 				{
@@ -255,8 +255,8 @@
 					"message": true
 				}
 			],
-			"time": "418",
-			"totalRequestTime": "418",
+			"time": "581",
+			"totalRequestTime": "581",
 			"iterationResults": {}
 		},
 		{
@@ -287,7 +287,7 @@
 				}
 			},
 			"times": [
-				"396"
+				"969"
 			],
 			"allTests": [
 				{
@@ -295,8 +295,8 @@
 					"message": true
 				}
 			],
-			"time": "396",
-			"totalRequestTime": "396",
+			"time": "969",
+			"totalRequestTime": "969",
 			"iterationResults": {}
 		},
 		{
@@ -322,15 +322,15 @@
 				}
 			},
 			"times": [
-				"11"
+				"19"
 			],
 			"allTests": [
 				{
 					"Status code is 404": true
 				}
 			],
-			"time": "11",
-			"totalRequestTime": "11",
+			"time": "19",
+			"totalRequestTime": "19",
 			"iterationResults": {}
 		},
 		{
@@ -361,7 +361,7 @@
 				}
 			},
 			"times": [
-				"413"
+				"1634"
 			],
 			"allTests": [
 				{
@@ -369,8 +369,8 @@
 					"message": true
 				}
 			],
-			"time": "413",
-			"totalRequestTime": "413",
+			"time": "1634",
+			"totalRequestTime": "1634",
 			"iterationResults": {}
 		},
 		{
@@ -406,7 +406,7 @@
 				}
 			},
 			"times": [
-				"8"
+				"12"
 			],
 			"allTests": [
 				{
@@ -415,8 +415,8 @@
 					"message": true
 				}
 			],
-			"time": "8",
-			"totalRequestTime": "8",
+			"time": "12",
+			"totalRequestTime": "12",
 			"iterationResults": {}
 		},
 		{
@@ -447,7 +447,7 @@
 				}
 			},
 			"times": [
-				"313"
+				"2959"
 			],
 			"allTests": [
 				{
@@ -455,8 +455,8 @@
 					"message": true
 				}
 			],
-			"time": "313",
-			"totalRequestTime": "313",
+			"time": "2959",
+			"totalRequestTime": "2959",
 			"iterationResults": {}
 		},
 		{
@@ -497,7 +497,7 @@
 				}
 			},
 			"times": [
-				"12"
+				"45"
 			],
 			"allTests": [
 				{
@@ -507,8 +507,8 @@
 					"projectUrl": true
 				}
 			],
-			"time": "12",
-			"totalRequestTime": "12",
+			"time": "45",
+			"totalRequestTime": "45",
 			"iterationResults": {}
 		},
 		{
@@ -549,7 +549,7 @@
 				}
 			},
 			"times": [
-				"354"
+				"1195"
 			],
 			"allTests": [
 				{
@@ -559,8 +559,8 @@
 					"projectUrl": true
 				}
 			],
-			"time": "354",
-			"totalRequestTime": "354",
+			"time": "1195",
+			"totalRequestTime": "1195",
 			"iterationResults": {}
 		},
 		{
@@ -601,7 +601,7 @@
 				}
 			},
 			"times": [
-				"19"
+				"12"
 			],
 			"allTests": [
 				{
@@ -611,8 +611,8 @@
 					"projectUrl": true
 				}
 			],
-			"time": "19",
-			"totalRequestTime": "19",
+			"time": "12",
+			"totalRequestTime": "12",
 			"iterationResults": {}
 		},
 		{
@@ -653,7 +653,7 @@
 				}
 			},
 			"times": [
-				"223"
+				"613"
 			],
 			"allTests": [
 				{
@@ -663,8 +663,8 @@
 					"projectUrl": true
 				}
 			],
-			"time": "223",
-			"totalRequestTime": "223",
+			"time": "613",
+			"totalRequestTime": "613",
 			"iterationResults": {}
 		},
 		{
@@ -705,7 +705,7 @@
 				}
 			},
 			"times": [
-				"271"
+				"897"
 			],
 			"allTests": [
 				{
@@ -715,8 +715,8 @@
 					"projectUrl": true
 				}
 			],
-			"time": "271",
-			"totalRequestTime": "271",
+			"time": "897",
+			"totalRequestTime": "897",
 			"iterationResults": {}
 		},
 		{
@@ -757,7 +757,7 @@
 				}
 			},
 			"times": [
-				"399"
+				"639"
 			],
 			"allTests": [
 				{
@@ -767,8 +767,8 @@
 					"projectUrl": true
 				}
 			],
-			"time": "399",
-			"totalRequestTime": "399",
+			"time": "639",
+			"totalRequestTime": "639",
 			"iterationResults": {}
 		},
 		{
@@ -799,7 +799,7 @@
 				}
 			},
 			"times": [
-				"233"
+				"281"
 			],
 			"allTests": [
 				{
@@ -807,8 +807,8 @@
 					"message": true
 				}
 			],
-			"time": "233",
-			"totalRequestTime": "233",
+			"time": "281",
+			"totalRequestTime": "281",
 			"iterationResults": {}
 		},
 		{
@@ -849,7 +849,7 @@
 				}
 			},
 			"times": [
-				"155"
+				"195"
 			],
 			"allTests": [
 				{
@@ -859,8 +859,8 @@
 					"projectUrl": true
 				}
 			],
-			"time": "155",
-			"totalRequestTime": "155",
+			"time": "195",
+			"totalRequestTime": "195",
 			"iterationResults": {}
 		},
 		{
@@ -901,7 +901,7 @@
 				}
 			},
 			"times": [
-				"287"
+				"374"
 			],
 			"allTests": [
 				{
@@ -911,8 +911,8 @@
 					"projectUrl": true
 				}
 			],
-			"time": "287",
-			"totalRequestTime": "287",
+			"time": "374",
+			"totalRequestTime": "374",
 			"iterationResults": {}
 		},
 		{
@@ -953,7 +953,7 @@
 				}
 			},
 			"times": [
-				"238"
+				"274"
 			],
 			"allTests": [
 				{
@@ -963,8 +963,8 @@
 					"projectUrl": true
 				}
 			],
-			"time": "238",
-			"totalRequestTime": "238",
+			"time": "274",
+			"totalRequestTime": "274",
 			"iterationResults": {}
 		},
 		{
@@ -990,15 +990,15 @@
 				}
 			},
 			"times": [
-				"12"
+				"6"
 			],
 			"allTests": [
 				{
 					"Status code is 404": true
 				}
 			],
-			"time": "12",
-			"totalRequestTime": "12",
+			"time": "6",
+			"totalRequestTime": "6",
 			"iterationResults": {}
 		},
 		{
@@ -1034,7 +1034,7 @@
 				}
 			},
 			"times": [
-				"25"
+				"59"
 			],
 			"allTests": [
 				{
@@ -1043,8 +1043,8 @@
 					"message": true
 				}
 			],
-			"time": "25",
-			"totalRequestTime": "25",
+			"time": "59",
+			"totalRequestTime": "59",
 			"iterationResults": {}
 		},
 		{
@@ -1080,7 +1080,7 @@
 				}
 			},
 			"times": [
-				"10"
+				"11"
 			],
 			"allTests": [
 				{
@@ -1089,8 +1089,8 @@
 					"message": true
 				}
 			],
-			"time": "10",
-			"totalRequestTime": "10",
+			"time": "11",
+			"totalRequestTime": "11",
 			"iterationResults": {}
 		},
 		{
@@ -1126,7 +1126,7 @@
 				}
 			},
 			"times": [
-				"37"
+				"24"
 			],
 			"allTests": [
 				{
@@ -1135,8 +1135,8 @@
 					"message": true
 				}
 			],
-			"time": "37",
-			"totalRequestTime": "37",
+			"time": "24",
+			"totalRequestTime": "24",
 			"iterationResults": {}
 		},
 		{
@@ -1172,7 +1172,7 @@
 				}
 			},
 			"times": [
-				"7"
+				"16"
 			],
 			"allTests": [
 				{
@@ -1181,8 +1181,8 @@
 					"message": true
 				}
 			],
-			"time": "7",
-			"totalRequestTime": "7",
+			"time": "16",
+			"totalRequestTime": "16",
 			"iterationResults": {}
 		},
 		{
@@ -1218,7 +1218,7 @@
 				}
 			},
 			"times": [
-				"7"
+				"15"
 			],
 			"allTests": [
 				{
@@ -1227,8 +1227,8 @@
 					"message": true
 				}
 			],
-			"time": "7",
-			"totalRequestTime": "7",
+			"time": "15",
+			"totalRequestTime": "15",
 			"iterationResults": {}
 		},
 		{
@@ -1264,7 +1264,7 @@
 				}
 			},
 			"times": [
-				"8"
+				"9"
 			],
 			"allTests": [
 				{
@@ -1273,8 +1273,8 @@
 					"message": true
 				}
 			],
-			"time": "8",
-			"totalRequestTime": "8",
+			"time": "9",
+			"totalRequestTime": "9",
 			"iterationResults": {}
 		},
 		{
@@ -1310,7 +1310,7 @@
 				}
 			},
 			"times": [
-				"8"
+				"22"
 			],
 			"allTests": [
 				{
@@ -1319,8 +1319,8 @@
 					"message": true
 				}
 			],
-			"time": "8",
-			"totalRequestTime": "8",
+			"time": "22",
+			"totalRequestTime": "22",
 			"iterationResults": {}
 		},
 		{
@@ -1356,7 +1356,7 @@
 				}
 			},
 			"times": [
-				"9"
+				"13"
 			],
 			"allTests": [
 				{
@@ -1365,8 +1365,8 @@
 					"message": true
 				}
 			],
-			"time": "9",
-			"totalRequestTime": "9",
+			"time": "13",
+			"totalRequestTime": "13",
 			"iterationResults": {}
 		},
 		{
@@ -1402,7 +1402,7 @@
 				}
 			},
 			"times": [
-				"8"
+				"27"
 			],
 			"allTests": [
 				{
@@ -1411,8 +1411,8 @@
 					"message": true
 				}
 			],
-			"time": "8",
-			"totalRequestTime": "8",
+			"time": "27",
+			"totalRequestTime": "27",
 			"iterationResults": {}
 		},
 		{
@@ -1448,7 +1448,7 @@
 				}
 			},
 			"times": [
-				"5"
+				"10"
 			],
 			"allTests": [
 				{
@@ -1457,105 +1457,13 @@
 					"message": true
 				}
 			],
-			"time": "5",
-			"totalRequestTime": "5",
+			"time": "10",
+			"totalRequestTime": "10",
 			"iterationResults": {}
 		},
 		{
 			"name": "Post project 4 returns 200",
 			"id": "dcaa375d-2a24-b13b-ce1f-69fe174e0ad1",
-			"url": "http://localhost:5000/createproject",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"Status code is 200": true,
-				"statusCode": true,
-				"message": true
-			},
-			"testPassFailCounts": {
-				"Status code is 200": {
-					"pass": 1,
-					"fail": 0
-				},
-				"statusCode": {
-					"pass": 1,
-					"fail": 0
-				},
-				"message": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"9"
-			],
-			"allTests": [
-				{
-					"Status code is 200": true,
-					"statusCode": true,
-					"message": true
-				}
-			],
-			"time": "9",
-			"totalRequestTime": "9",
-			"iterationResults": {}
-		},
-		{
-			"name": "Post project 5 returns 200",
-			"id": "e5387432-5e88-7dd6-c1d3-d48dc77721e0",
-			"url": "http://localhost:5000/createproject",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"Status code is 200": true,
-				"statusCode": true,
-				"message": true
-			},
-			"testPassFailCounts": {
-				"Status code is 200": {
-					"pass": 1,
-					"fail": 0
-				},
-				"statusCode": {
-					"pass": 1,
-					"fail": 0
-				},
-				"message": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"8"
-			],
-			"allTests": [
-				{
-					"Status code is 200": true,
-					"statusCode": true,
-					"message": true
-				}
-			],
-			"time": "8",
-			"totalRequestTime": "8",
-			"iterationResults": {}
-		},
-		{
-			"name": "Post project 6 returns 200",
-			"id": "ef115571-0b03-1819-d18c-75b2312fa8eb",
 			"url": "http://localhost:5000/createproject",
 			"totalTime": 0,
 			"responseCode": {
@@ -1600,192 +1508,100 @@
 			"iterationResults": {}
 		},
 		{
+			"name": "Post project 5 returns 200",
+			"id": "e5387432-5e88-7dd6-c1d3-d48dc77721e0",
+			"url": "http://localhost:5000/createproject",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"statusCode": true,
+				"message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"statusCode": {
+					"pass": 1,
+					"fail": 0
+				},
+				"message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"20"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"statusCode": true,
+					"message": true
+				}
+			],
+			"time": "20",
+			"totalRequestTime": "20",
+			"iterationResults": {}
+		},
+		{
+			"name": "Post project 6 returns 200",
+			"id": "ef115571-0b03-1819-d18c-75b2312fa8eb",
+			"url": "http://localhost:5000/createproject",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"statusCode": true,
+				"message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"statusCode": {
+					"pass": 1,
+					"fail": 0
+				},
+				"message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"23"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"statusCode": true,
+					"message": true
+				}
+			],
+			"time": "23",
+			"totalRequestTime": "23",
+			"iterationResults": {}
+		},
+		{
 			"name": "Post project 7 returns 200",
 			"id": "6d996ea1-8dca-f77f-ff78-321ece3668af",
-			"url": "http://localhost:5000/createproject",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"Status code is 200": true,
-				"statusCode": true,
-				"message": true
-			},
-			"testPassFailCounts": {
-				"Status code is 200": {
-					"pass": 1,
-					"fail": 0
-				},
-				"statusCode": {
-					"pass": 1,
-					"fail": 0
-				},
-				"message": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"8"
-			],
-			"allTests": [
-				{
-					"Status code is 200": true,
-					"statusCode": true,
-					"message": true
-				}
-			],
-			"time": "8",
-			"totalRequestTime": "8",
-			"iterationResults": {}
-		},
-		{
-			"name": "Post project 8 returns 200",
-			"id": "965217dd-d066-40c9-e2e9-03539c84040d",
-			"url": "http://localhost:5000/createproject",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"Status code is 200": true,
-				"statusCode": true,
-				"message": true
-			},
-			"testPassFailCounts": {
-				"Status code is 200": {
-					"pass": 1,
-					"fail": 0
-				},
-				"statusCode": {
-					"pass": 1,
-					"fail": 0
-				},
-				"message": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"7"
-			],
-			"allTests": [
-				{
-					"Status code is 200": true,
-					"statusCode": true,
-					"message": true
-				}
-			],
-			"time": "7",
-			"totalRequestTime": "7",
-			"iterationResults": {}
-		},
-		{
-			"name": "Post project 9 returns 200",
-			"id": "e2955e6f-4bae-7e34-f60a-8b1ee4b576d5",
-			"url": "http://localhost:5000/createproject",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"Status code is 200": true,
-				"statusCode": true,
-				"message": true
-			},
-			"testPassFailCounts": {
-				"Status code is 200": {
-					"pass": 1,
-					"fail": 0
-				},
-				"statusCode": {
-					"pass": 1,
-					"fail": 0
-				},
-				"message": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"8"
-			],
-			"allTests": [
-				{
-					"Status code is 200": true,
-					"statusCode": true,
-					"message": true
-				}
-			],
-			"time": "8",
-			"totalRequestTime": "8",
-			"iterationResults": {}
-		},
-		{
-			"name": "Post project 10 returns 200",
-			"id": "b382b79b-d4d0-e5be-f383-47331aaee4b3",
-			"url": "http://localhost:5000/createproject",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"Status code is 200": true,
-				"statusCode": true,
-				"message": true
-			},
-			"testPassFailCounts": {
-				"Status code is 200": {
-					"pass": 1,
-					"fail": 0
-				},
-				"statusCode": {
-					"pass": 1,
-					"fail": 0
-				},
-				"message": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"8"
-			],
-			"allTests": [
-				{
-					"Status code is 200": true,
-					"statusCode": true,
-					"message": true
-				}
-			],
-			"time": "8",
-			"totalRequestTime": "8",
-			"iterationResults": {}
-		},
-		{
-			"name": "Post 2 Projects in the json array",
-			"id": "7cd6f36c-600e-6e94-950e-fe31ea7bf620",
 			"url": "http://localhost:5000/createproject",
 			"totalTime": 0,
 			"responseCode": {
@@ -1830,8 +1646,54 @@
 			"iterationResults": {}
 		},
 		{
-			"name": "Post Single project as Json array",
-			"id": "285a4c8a-d7f6-6ad0-d136-2ea17891e83a",
+			"name": "Post project 8 returns 200",
+			"id": "965217dd-d066-40c9-e2e9-03539c84040d",
+			"url": "http://localhost:5000/createproject",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"statusCode": true,
+				"message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"statusCode": {
+					"pass": 1,
+					"fail": 0
+				},
+				"message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"11"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"statusCode": true,
+					"message": true
+				}
+			],
+			"time": "11",
+			"totalRequestTime": "11",
+			"iterationResults": {}
+		},
+		{
+			"name": "Post project 9 returns 200",
+			"id": "e2955e6f-4bae-7e34-f60a-8b1ee4b576d5",
 			"url": "http://localhost:5000/createproject",
 			"totalTime": 0,
 			"responseCode": {
@@ -1876,6 +1738,144 @@
 			"iterationResults": {}
 		},
 		{
+			"name": "Post project 10 returns 200",
+			"id": "b382b79b-d4d0-e5be-f383-47331aaee4b3",
+			"url": "http://localhost:5000/createproject",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"statusCode": true,
+				"message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"statusCode": {
+					"pass": 1,
+					"fail": 0
+				},
+				"message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"10"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"statusCode": true,
+					"message": true
+				}
+			],
+			"time": "10",
+			"totalRequestTime": "10",
+			"iterationResults": {}
+		},
+		{
+			"name": "Post 2 Projects in the json array",
+			"id": "7cd6f36c-600e-6e94-950e-fe31ea7bf620",
+			"url": "http://localhost:5000/createproject",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"statusCode": true,
+				"message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"statusCode": {
+					"pass": 1,
+					"fail": 0
+				},
+				"message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"22"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"statusCode": true,
+					"message": true
+				}
+			],
+			"time": "22",
+			"totalRequestTime": "22",
+			"iterationResults": {}
+		},
+		{
+			"name": "Post Single project as Json array",
+			"id": "285a4c8a-d7f6-6ad0-d136-2ea17891e83a",
+			"url": "http://localhost:5000/createproject",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"statusCode": true,
+				"message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"statusCode": {
+					"pass": 1,
+					"fail": 0
+				},
+				"message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"15"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"statusCode": true,
+					"message": true
+				}
+			],
+			"time": "15",
+			"totalRequestTime": "15",
+			"iterationResults": {}
+		},
+		{
 			"name": "Post 2 Projects with extra param",
 			"id": "00800e98-2071-0087-96ec-609d1e9bcb99",
 			"url": "http://localhost:5000/createproject",
@@ -1908,7 +1908,7 @@
 				}
 			},
 			"times": [
-				"6"
+				"11"
 			],
 			"allTests": [
 				{
@@ -1917,12 +1917,12 @@
 					"message": true
 				}
 			],
-			"time": "6",
-			"totalRequestTime": "6",
+			"time": "11",
+			"totalRequestTime": "11",
 			"iterationResults": {}
 		},
 		{
-			"name": "PUT Single Json object copy",
+			"name": "PUT request",
 			"id": "bf3abbca-8f8b-fa6d-347c-090bd83940e0",
 			"url": "http://localhost:5000/createproject",
 			"totalTime": 0,
@@ -1934,29 +1934,50 @@
 					"detail": "A request was made of a resource using a request method not supported by that resource; for example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource."
 				}
 			},
-			"tests": {},
-			"testPassFailCounts": {},
+			"tests": {
+				"Status code is 405": true,
+				"statusCode": true,
+				"message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 405": {
+					"pass": 1,
+					"fail": 0
+				},
+				"statusCode": {
+					"pass": 1,
+					"fail": 0
+				},
+				"message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
 			"times": [
-				"10"
+				"7"
 			],
 			"allTests": [
-				{}
+				{
+					"Status code is 405": true,
+					"statusCode": true,
+					"message": true
+				}
 			],
-			"time": "10",
-			"totalRequestTime": "10",
+			"time": "7",
+			"totalRequestTime": "7",
 			"iterationResults": {}
 		}
 	],
-	"totalPass": 116,
+	"totalPass": 119,
 	"totalFail": 0,
-	"totalTime": 5741,
+	"totalTime": 12696,
 	"lifecycle": "done",
 	"requests": [
 		{
 			"name": "Get invalid parameter",
 			"id": "9c8016e2-5635-12a4-ba45-c41c97bca3c8",
 			"url": "http://localhost:5000/requestproject?projectid=1&invalidParam=1",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 403,
 				"name": "Forbidden",
@@ -1984,7 +2005,7 @@
 			"name": "Get with non existing projectid",
 			"id": "5b35c1be-4dcc-5eae-fba9-ac5f250fc543",
 			"url": "http://localhost:5000/requestproject?projectid=11",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2008,7 +2029,7 @@
 			"name": "Get with correct country and wrong number",
 			"id": "66cc4271-8625-514a-0ecf-a8eb7dd9f964",
 			"url": "http://localhost:5000/requestproject?country=india&number=1000",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2032,7 +2053,7 @@
 			"name": "Get with non existing country",
 			"id": "e2be0134-eb59-866b-65f2-a29434f8e4f9",
 			"url": "http://localhost:5000/requestproject?country=argentina",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2056,7 +2077,7 @@
 			"name": "Get with wrong path",
 			"id": "ce4a5a7c-3806-04ac-a493-0f07661221a5",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found",
@@ -2076,7 +2097,7 @@
 			"name": "Get with negative project id",
 			"id": "aaf90ae1-7c4a-9d48-e806-ce02cb99bbd1",
 			"url": "http://localhost:5000/requestproject?projectid=-1",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2100,7 +2121,7 @@
 			"name": "Get with no value for parameter projectid",
 			"id": "9b3868ce-f2a3-da75-5081-4a0f42ab2ee3",
 			"url": "http://localhost:5000/requestproject?projectid",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 403,
 				"name": "Forbidden",
@@ -2128,7 +2149,7 @@
 			"name": "Get with wrong keyword and number",
 			"id": "0ab10752-a4e1-b8a1-4f05-d4131bf3a975",
 			"url": "http://localhost:5000/requestproject?keyword=india&number=1000",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2152,7 +2173,7 @@
 			"name": "Get with projectid, country, keyword and number",
 			"id": "fb2ecf7a-a127-b61f-e3b2-648ff928863d",
 			"url": "http://localhost:5000/requestproject?projectid=5&country=usa&number=29&keyword=sports",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2184,7 +2205,7 @@
 			"name": "Get with no parameters",
 			"id": "7fb83471-c08a-6ec8-3ea3-0109b95334e1",
 			"url": "http://localhost:5000/requestproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2216,7 +2237,7 @@
 			"name": "Get with projectId and country",
 			"id": "e69046f7-0e2a-d9f8-93c4-33017ea22548",
 			"url": "http://localhost:5000/requestproject?projectid=6&country=usa",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2248,7 +2269,7 @@
 			"name": "Get with correct country",
 			"id": "970b84ad-6f18-8127-fa85-690be90da2fe",
 			"url": "http://localhost:5000/requestproject?country=usa",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2280,7 +2301,7 @@
 			"name": "Get with correct country and number",
 			"id": "2a50a3c5-29b8-d479-782e-f807990877c8",
 			"url": "http://localhost:5000/requestproject?country=india&number=20",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2312,7 +2333,7 @@
 			"name": "Get with correct keyword",
 			"id": "620391b5-efa1-29ed-4985-21bac07f7e20",
 			"url": "http://localhost:5000/requestproject?keyword=xyz",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2344,7 +2365,7 @@
 			"name": "Get with only project id 1",
 			"id": "2e70006a-3f64-7c55-2d9c-dce851e9014c",
 			"url": "http://localhost:5000/requestproject?projectid=1",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2368,7 +2389,7 @@
 			"name": "Get with correct number",
 			"id": "622d9a46-93c5-5095-83d9-477897f9084b",
 			"url": "http://localhost:5000/requestproject?number=10",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2400,7 +2421,7 @@
 			"name": "Get with correct keyword and number",
 			"id": "06ca3dcb-6e26-7412-107f-5afe10c8fafa",
 			"url": "http://localhost:5000/requestproject?keyword=sports&number=20",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2432,7 +2453,7 @@
 			"name": "Get with correct country, keyword and number",
 			"id": "2d544d41-3f64-d47c-add7-81ecdbad9ed1",
 			"url": "http://localhost:5000/requestproject?country=india&keyword=sports&number=20",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2464,7 +2485,7 @@
 			"name": "POST with wrong path",
 			"id": "3d6ff783-4fb9-99b4-a97e-ad33da42f4cb",
 			"url": "http://localhost:5000/requestproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found",
@@ -2484,7 +2505,7 @@
 			"name": "Post Single project with empty projectName",
 			"id": "0ef1292e-f96c-c81f-8cff-1cc5a611534d",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 403,
 				"name": "Forbidden",
@@ -2512,7 +2533,7 @@
 			"name": "Post Single project with null projectName",
 			"id": "1fc0820c-1b3f-b944-4ffa-58c3b6f27219",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 403,
 				"name": "Forbidden",
@@ -2540,7 +2561,7 @@
 			"name": "Post Single project with id as IDENTITY",
 			"id": "ad0e1a0e-e133-415f-535b-090cd9ff8974",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 403,
 				"name": "Forbidden",
@@ -2568,7 +2589,7 @@
 			"name": "Post Single project with additional key EXTRA",
 			"id": "5b1e5fd5-aa70-f67a-699a-18f82c2f2cbe",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 403,
 				"name": "Forbidden",
@@ -2596,7 +2617,7 @@
 			"name": "Post with empty Json",
 			"id": "dc2fbc31-8a53-01b8-19c5-e14bfa0197f6",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 403,
 				"name": "Forbidden",
@@ -2624,7 +2645,7 @@
 			"name": "Post with incorrect Json format",
 			"id": "b92aa864-c873-4b0c-1de0-97b76a58f941",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -2652,7 +2673,7 @@
 			"name": "Post with string as body",
 			"id": "50906247-0297-8b6b-9584-cf720e258185",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 403,
 				"name": "Forbidden",
@@ -2680,7 +2701,7 @@
 			"name": "Post project 1 returns 200",
 			"id": "05d7c667-13ba-93af-a34f-255624f504ca",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2708,7 +2729,7 @@
 			"name": "Post project 2 returns 200",
 			"id": "2c9c54e1-7278-be01-2663-8922b45791d5",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2736,7 +2757,7 @@
 			"name": "Post project 3 returns 200",
 			"id": "d1c3f61a-9932-ff6c-8b99-5ef39760ec25",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2764,7 +2785,7 @@
 			"name": "Post project 4 returns 200",
 			"id": "dcaa375d-2a24-b13b-ce1f-69fe174e0ad1",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2792,7 +2813,7 @@
 			"name": "Post project 5 returns 200",
 			"id": "e5387432-5e88-7dd6-c1d3-d48dc77721e0",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2820,7 +2841,7 @@
 			"name": "Post project 6 returns 200",
 			"id": "ef115571-0b03-1819-d18c-75b2312fa8eb",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2848,7 +2869,7 @@
 			"name": "Post project 7 returns 200",
 			"id": "6d996ea1-8dca-f77f-ff78-321ece3668af",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2876,7 +2897,7 @@
 			"name": "Post project 8 returns 200",
 			"id": "965217dd-d066-40c9-e2e9-03539c84040d",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2904,7 +2925,7 @@
 			"name": "Post project 9 returns 200",
 			"id": "e2955e6f-4bae-7e34-f60a-8b1ee4b576d5",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2932,7 +2953,7 @@
 			"name": "Post project 10 returns 200",
 			"id": "b382b79b-d4d0-e5be-f383-47331aaee4b3",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2960,7 +2981,7 @@
 			"name": "Post 2 Projects in the json array",
 			"id": "7cd6f36c-600e-6e94-950e-fe31ea7bf620",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2988,7 +3009,7 @@
 			"name": "Post Single project as Json array",
 			"id": "285a4c8a-d7f6-6ad0-d136-2ea17891e83a",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -3016,7 +3037,7 @@
 			"name": "Post 2 Projects with extra param",
 			"id": "00800e98-2071-0087-96ec-609d1e9bcb99",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 403,
 				"name": "Forbidden",
@@ -3041,10 +3062,10 @@
 			}
 		},
 		{
-			"name": "PUT Single Json object copy",
+			"name": "PUT request",
 			"id": "bf3abbca-8f8b-fa6d-347c-090bd83940e0",
 			"url": "http://localhost:5000/createproject",
-			"time": "2017-05-30T10:15:02.122Z",
+			"time": "2017-05-30T10:24:54.936Z",
 			"responseCode": {
 				"code": 405,
 				"name": "Method Not Allowed",
@@ -3053,7 +3074,20 @@
 					"detail": "A request was made of a resource using a request method not supported by that resource; for example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource."
 				}
 			},
-			"testPassFailCounts": {}
+			"testPassFailCounts": {
+				"Status code is 405": {
+					"pass": 1,
+					"fail": 0
+				},
+				"statusCode": {
+					"pass": 1,
+					"fail": 0
+				},
+				"message": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
 		}
 	],
 	"synced": false

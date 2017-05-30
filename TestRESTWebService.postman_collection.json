@@ -1262,7 +1262,22 @@
 			]
 		},
 		{
-			"name": "PUT Single Json object copy",
+			"name": "PUT request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 405\"] = responseCode.code === 405;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"statusCode\"] = jsonData.statusCode === 405;",
+							"tests[\"message\"] = jsonData.message === \"Invalid request method\";"
+						]
+					}
+				}
+			],
 			"request": {
 				"url": "http://localhost:5000/createproject",
 				"method": "PUT",
