@@ -6,8 +6,8 @@
 * Spark Java http://sparkjava.com/
 * Gson
 * Lombok https://projectlombok.org/
-* log4j
-* slf4j
+* log4j http://logging.apache.org/log4j/1.2/
+* slf4j 1.7.25 https://www.slf4j.org/
 
 ## Running the Webservice
 1. Download the UnityRestWebService.jar
