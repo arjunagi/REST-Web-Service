@@ -10,8 +10,8 @@
 * slf4j 1.7.25 https://www.slf4j.org/
 
 ## Running the Webservice
-1. Download the UnityRestWebService.jar
-2. Go to command line and execute the following to start the service
+1. Clone the project.
+2. In command line, navigate to REST-Web-Service/ and execute the following to start the service
 ```
 java -jar UnityRestWebService.jar
 ```
