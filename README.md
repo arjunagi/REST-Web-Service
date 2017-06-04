@@ -13,7 +13,7 @@
 1. Clone the project.
 2. In command line, navigate to REST-Web-Service/ and execute the following to start the service
 ```
-java -jar UnityRestWebService.jar
+java -jar RestWebService.jar
 ```
 3. Send the POST or GET requests (use url http://localhost:5000/)
 4. The projects will be stored in the file "projects.txt" in the same location as the jar
