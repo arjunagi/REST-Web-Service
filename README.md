@@ -19,7 +19,7 @@ RESTful web service which handles POST and GET methods.
 ```
 java -jar RestWebService.jar
 ```
-3. Send the POST or GET requests (use url http://localhost:5000/)
+3. Send the POST or GET requests (use url http://localhost:5000/) - I used Postman for this.
 4. The projects will be stored in the file "projects.txt" in the same location as the jar
 5. The server logs will be stored in the file "web_service_logs.txt" in the same location as the jar
 
