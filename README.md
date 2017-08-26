@@ -1,7 +1,8 @@
 # REST Based Webservice
 RESTful web service which handles POST and GET methods.
-1. POST: Stores the JSON data sent to it in a file 
-2. GET: Sends the requested data to the user, if available.
+1. POST: Stores the received JSON data to a file 
+2. GET: Sends the requested data, if available, to the user in JSON format.
+3. Error scenarios are handled by sending appropriate HTTP error codes. 
 
 ## Environment and Additional Libraries Used
 * Java 8
